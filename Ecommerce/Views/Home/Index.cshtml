@@ -1,9 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous">
+</script>
 
-
-@* <script>
+<script>
     $(document).ready(function () {
 
         var productContent = '';
@@ -21,7 +24,7 @@
             $('#dvProductList').html(productContent);
         });
     }
-</script> *@
+</script>
 <div id="dvProductList">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
