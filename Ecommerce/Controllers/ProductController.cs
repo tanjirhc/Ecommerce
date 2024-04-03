@@ -6,7 +6,7 @@ namespace Ecommerce.Controllers
     {
         public IActionResult ProductName()
         {
-            return Ok("Product Name API Success");
+            return BadRequest();
         }
     }
 }
