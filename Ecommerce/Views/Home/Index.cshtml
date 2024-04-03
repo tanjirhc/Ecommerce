@@ -2,7 +2,19 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+
+<script>
+    $(document).ready(function () {
+
+        var productContent = '';
+        $.get("demo_test.asp", function (data, status) {
+            $.each(data, function (index, value) {
+                console.log(value)
+            })
+        });
+    }
+</script>
+<div id="dvProductList">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
