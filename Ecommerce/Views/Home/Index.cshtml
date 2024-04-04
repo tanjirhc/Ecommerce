@@ -1,31 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-        crossorigin="anonymous">
-</script>
 
-<script>
-    $(document).ready(function () {
-
-        var productContent = '';
-        $.get("demo_test.asp", function (data, status) {
-            $.each(data, function (index, value) {
-                var productContent =
-                    <div>
-                    <p>${ value.Name }</p>>
-                        <p> ${ value.Price } </p>>
-                            <p> ${ value.Quantity } </p>>
-                                <p> ${ value.Picture } </p>>
-
-                </div>
-            })
-            $('#dvProductList').html(productContent);
-        });
-    }
-</script>
-<div id="dvProductList">
+<div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>

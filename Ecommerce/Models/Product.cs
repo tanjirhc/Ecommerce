@@ -2,6 +2,7 @@
 
 namespace Ecommerce.Models
 {
+    //[Serialization]
     public class Product
     {
         [DataMember]

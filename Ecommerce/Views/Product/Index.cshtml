@@ -1,8 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Product Page";
 }
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous">
+</script>
 
-<div class="text-center">
+<script>
+    $(document).ready(function() {
+
+        var productContent = '';
+        $.get("http://localhost:44886/ProductAPI/LisProduct", function (data, status) {
+            // $.each(data, function (index, value) {
+            //     var productContent =
+            //       <div>
+            //         <p>${ value.Name }</p>>
+            //             <p>${ value.Price } </p>>
+            //              <p>${ value.Quantity } </p>>
+            //              <p>${ value.Picture } </p>>
+            //        </div>
+            // })
+            // $('#dvProductList').html(productContent);
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    }
+</script>
+<div id="dvProductList">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
